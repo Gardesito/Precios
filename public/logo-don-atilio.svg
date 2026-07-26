@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-labelledby="title">
+  <title id="title">Don Atilio</title>
+  <ellipse cx="110" cy="75" rx="101" ry="66" fill="#0d5b35" stroke="#f1c64b" stroke-width="10"/>
+  <text x="110" y="70" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="43" font-style="italic">Don</text>
+  <text x="110" y="108" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="31" font-weight="800" letter-spacing="7">ATILIO</text>
+</svg>

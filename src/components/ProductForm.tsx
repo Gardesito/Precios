@@ -56,6 +56,7 @@ export function ProductForm({ editingProduct, onSave, onCancel }: Props) {
       return
     }
     onSave({
+      ...(editingProduct ?? {}),
       id: editingProduct?.id ?? crypto.randomUUID(),
       name: values.name.trim(),
       price: Number(values.price.replace(',', '.')),

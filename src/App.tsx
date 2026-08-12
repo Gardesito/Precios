@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import './App.css'
 import { AppHeader } from './components/AppHeader'
 import { PrintButton } from './components/PrintButton'
-import { PrintablePage } from './components/PrintablePage'
+import { PrintPreviewPage } from './components/PrintPreviewPage'
 import { ProductForm } from './components/ProductForm'
 import { ProductList } from './components/ProductList'
 import { PromotionValidityPanel } from './components/PromotionValidityPanel'
@@ -97,7 +97,7 @@ function App() {
             <div className="preview-actions"><label htmlFor="preview-branch">Sucursal</label><select id="preview-branch" value={selectedBranch} onChange={(e) => setSelectedBranch(e.target.value)}>{branches.map((branch) => <option value={branch.id} key={branch.id}>{branch.name}</option>)}</select><PrintButton /></div>
           </div>
           <div className="pages-container print-root">
-            {pages.length ? pages.map((page, index) => <PrintablePage products={page} pageNumber={index + 1} promotionValidity={promotionValidity} key={page.map((product) => product.id).join('-')} />) : <div className="empty-preview no-print"><strong>No hay carteles para esta sucursal.</strong><span>Agregá un producto o elegí otra sucursal.</span></div>}
+            {pages.length ? pages.map((page, index) => <PrintPreviewPage products={page} pageNumber={index + 1} promotionValidity={promotionValidity} key={page.map((product) => product.id).join('-')} />) : <div className="empty-preview no-print"><strong>No hay carteles para esta sucursal.</strong><span>Agregá un producto o elegí otra sucursal.</span></div>}
           </div>
         </section>
       </main>

@@ -53,7 +53,7 @@ export function ExcelImporter({ defaultBranchId, onImport }: Props) {
     const products: ImportedProduct[] = valid.map((row) => ({
       id: crypto.randomUUID(), code: String(row.code), name: row.name.replace(/\s+/g, ' ').trim().toLocaleUpperCase('es-AR'), category: row.category,
       previousPrice: row.previousPrice === null ? null : roundPrice(row.previousPrice), price: roundPrice(row.price!), discount: row.discount,
-      status: 'oferta', stock: null, stockText: '', branchId,
+      status: 'oferta', stock: null, stockText: '', branchId, promotionType: 'none',
     }))
     onImport(products, branchId)
     close()
